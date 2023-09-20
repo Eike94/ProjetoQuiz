@@ -118,6 +118,7 @@ const questionElement = document.querySelector('.question');
 const optionsElement = document.querySelector('.options');
 const scoreElement = document.querySelector('.score');
 const resultElement = document.querySelector('.result');
+const clickSound = document.getElementById('clickSound');
 
 function loadQuestion() {
     const question = questions[currentQuestion];
@@ -146,13 +147,23 @@ function checkAnswer(selectedIndex) {
     } else {
         showResult();
     }
+    
 }
 
 function showResult() {
     questionElement.style.display = 'none';
     optionsElement.style.display = 'none';
-    scoreElement.textContent = `Pontuação final: ${score} de ${questions.length}`;
-    resultElement.textContent = `Você acertou ${score} de ${questions.length} questões.`;
+    
+    const percentage = (score / questions.length) * 100;
+    
+    if (percentage < 50) {
+        resultElement.innerHTML = `Poxa, não foi desta vez. Tente novamente. <br> Sua pontuação foi: ${score}`;
+    } else if (percentage <= 90) {
+        resultElement.innerHTML  = `Muito bom!! <br> Sua pontuação foi: ${score}`;
+    } else {
+        resultElement.innerHTML  = `Excelente! Você acertou todas! <br> Sua pontuação foi: ${score}`;
+    }
+    
     resultElement.style.display = 'block';
     document.querySelector('.restart-button').style.display = 'block';
 }
