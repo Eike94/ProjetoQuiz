@@ -99,7 +99,7 @@ const questions = [
         answer: 4
     },
     {
-        question: "A falta de tratamento de esgoto é das principais causas da poluição das águas, uma vez que grande parte do esgoto doméstico é lançado nos rios e mares. A poluição do solo resulta da utilização de agrotóxicos, além da produção de lixo e do descarte incorreto de produtos químicos. A principal causa da poluição do ar é a liberação de dióxido de carbono no meio ambiente. Sobre os problemas ambientais citados acima, estão corretas as sentenças:",
+        question: "\nI A falta de tratamento de esgoto é das principais causas da poluição das águas, uma vez que grande parte do esgoto doméstico é lançado nos rios e mares. \nII A poluição do solo resulta da utilização de agrotóxicos, além da produção de lixo e do descarte incorreto de produtos químicos. \nIII A principal causa da poluição do ar é a liberação de dióxido de carbono no meio ambiente. Sobre os problemas ambientais citados acima, estão corretas as sentenças:",
         options: [
             "I",
             "I e II",
